@@ -17,7 +17,23 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: relojLlegada
-          uri: lb://relojllegada
+        - id: relojllegada-service
+          uri: lb://relojllegada-service
           predicates:
             - Path=/relojllegada/**
+        - id: autorizacion-service
+          uri: lb://autorizacion-service
+          predicates:
+            - Path=/autorizacion/**
+        - id: empleado-service
+          uri: lb://empleado-service
+          predicates:
+            - Path=/empleado/**
+        - id: justificativos-service
+          uri: lb://justificativos-service
+          predicates:
+            - Path=/justificativos/**
+        - id: calculadoraplanilla-service
+          uri: lb://calculadoraplanilla-service
+          predicates:
+            - Path=/calculadoraplanilla/**
