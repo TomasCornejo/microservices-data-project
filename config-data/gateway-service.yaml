@@ -38,7 +38,7 @@ spring:
           predicates:
             - Path=/calculadoraplanilla/**
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
             allowedOrigins: "*"
             allowedHeaders: "*"
