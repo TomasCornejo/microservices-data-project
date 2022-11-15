@@ -37,3 +37,10 @@ spring:
           uri: lb://calculadoraplanilla-service
           predicates:
             - Path=/calculadoraplanilla/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
